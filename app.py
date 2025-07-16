@@ -170,8 +170,11 @@ else:
         positive_cost_difference_slice = max(0, cost_diff)
         remaining_total_cost_slice = total_cost - positive_cost_difference_slice
 
-        labels = ['Positive Cost Difference (WAN - Internet)', 'Total Cost (excluding positive difference)']
-        values = [positive_cost_difference_slice, remaining_total_cost_slice]
+        #labels = ['Positive Cost Difference (WAN - Internet)', 'Total Cost (excluding positive difference)']
+        #values = [positive_cost_difference_slice, remaining_total_cost_slice]
+
+        labels = ['Positive Cost Difference (WAN - Internet)', 'Total Cost']
+        values = [positive_cost_difference_slice, total_cost]
 
         fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3,
                                      hoverinfo='label+percent+value',
